@@ -125,7 +125,7 @@ public interface Session {
     void removeAttribute(Object key);
 
     /**
-     * Set session timeout, in millisecond.
+     * 设置Session会话超时，以毫秒为单位.
      * 
      * @param timeout
      *            session timeout
@@ -133,14 +133,14 @@ public interface Session {
     void setSessionTimeout(int timeout);
 
     /**
-     * Get session timeout, in millisecond.
+     * 获取Session会话超时，以毫秒为单位.
      * 
      * @return session timeout
      */
     int getSessionTimeout();
 
     /**
-     * Get session filter chain.
+     * 获取Session会话过滤器链.
      * 
      * @param reversed
      *            some events like xxxSend/xxxSent need to be dispatched in
@@ -150,7 +150,7 @@ public interface Session {
     SessionFilterChain getSessionFilterChain(boolean reversed);
 
     /**
-     * Add session filter.
+     * 添加Session会话过滤器.
      * 
      * @param filter
      *            session filter
@@ -158,7 +158,7 @@ public interface Session {
     void addSessionFilter(SessionFilter filter);
 
     /**
-     * Add session filter.
+     * 添加Session会话过滤器.
      * 
      * @param index
      *            index
@@ -168,7 +168,7 @@ public interface Session {
     void addSessionFilter(int index, SessionFilter filter);
 
     /**
-     * Remove session filter.
+     * 删除Session会话过滤器.
      * 
      * @param filter
      *            session filter
@@ -176,7 +176,7 @@ public interface Session {
     void removeSessionFilter(SessionFilter filter);
 
     /**
-     * Get session filter.
+     * 获取Session会话过滤器.
      * 
      * @param index
      *            index
@@ -185,14 +185,14 @@ public interface Session {
     SessionFilter getSessionFilter(int index);
 
     /**
-     * Get all session filters.
+     * 获取所有的Session会话过滤器.
      * 
      * @return session filters
      */
     SessionFilter[] getSessionFilters();
 
     /**
-     * Set session handler.
+     * 设置Sesison会话处理器.
      * 
      * @param handler
      *            session handler
@@ -200,28 +200,28 @@ public interface Session {
     void setSessionHandler(SessionHandler handler);
 
     /**
-     * Get session handler.
+     * 获取Session会话处理器.
      * 
      * @return session handler
      */
     SessionHandler getSessionHandler();
 
     /**
-     * Session have started.
+     * Session 会话已经开始.
      * 
      * @return session have started
      */
     boolean isStarted();
 
     /**
-     * Start the session.
+     * 开始 session.
      * 
      * @return start future
      */
     Future start();
 
     /**
-     * Close the session.
+     * 关闭 session.
      * 
      * @return close future
      */

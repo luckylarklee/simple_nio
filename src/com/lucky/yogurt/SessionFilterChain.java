@@ -1,7 +1,7 @@
 package com.lucky.yogurt;
 
 /**
- * 会话过滤器链，管理会话过滤器
+ * Session会话过滤器链，管理会话过滤器
  * @author Administrator
  *
  */

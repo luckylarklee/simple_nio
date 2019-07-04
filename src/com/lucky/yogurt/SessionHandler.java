@@ -1,7 +1,7 @@
 package com.lucky.yogurt;
 
 /**
- * <code> Session </ code>会话处理程序
+ * <code> Session </ code>会话处理器
  * @author Administrator
  *
  */
