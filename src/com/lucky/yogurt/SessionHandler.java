@@ -1,8 +1,13 @@
 package com.lucky.yogurt;
 
+/**
+ * <code> Session </ code>会话处理程序
+ * @author Administrator
+ *
+ */
 public interface SessionHandler {
 	/**
-     * Session have started.
+     * Session 会话开始
      * 
      * @param session
      *            session
@@ -12,7 +17,7 @@ public interface SessionHandler {
     void sessionStarted(Session session) throws Exception;
 
     /**
-     * Session have closed.
+     * Session 会话关闭
      * 
      * @param session
      *            session
@@ -22,7 +27,7 @@ public interface SessionHandler {
     void sessionClosed(Session session) throws Exception;
 
     /**
-     * Session timeout, but not closed.
+     * Session 会话超时 ，但是没有关闭
      * 
      * @param session
      *            session
@@ -32,7 +37,7 @@ public interface SessionHandler {
     void sessionTimeout(Session session) throws Exception;
 
     /**
-     * Session received a object which is decoded by <code>PacketDecoder</code>.
+     * Session 接收到一个被 <code>PacketDecoder</code>解码的Object.
      * 
      * @param session
      *            session
@@ -44,7 +49,7 @@ public interface SessionHandler {
     void objectReceived(Session session, Object obj) throws Exception;
 
     /**
-     * Session sent a object.
+     * Session 发送一个Object
      * 
      * @param session
      *            session
@@ -56,7 +61,7 @@ public interface SessionHandler {
     void objectSent(Session session, Object obj) throws Exception;
 
     /**
-     * Session caught a exception.
+     * Session 会话捕获的异常.
      * 
      * @param session
      *            session

@@ -1,13 +1,13 @@
 package com.lucky.yogurt;
 
 /**
- * 
+ * Session会话过滤器，过滤Session会话事件
  *
  */
 public interface SessionFilter {
 
 	/**
-     * Session have started.
+     * Session 会话已经开始.
      * 
      * @param filterChain
      *            session filter chain
@@ -17,7 +17,7 @@ public interface SessionFilter {
     void sessionStarted(SessionFilterChain filterChain) throws Exception;
 
     /**
-     * Session have closed.
+     * Session 会话已经关闭.
      * 
      * @param filterChain
      *            session filter chain
@@ -27,7 +27,7 @@ public interface SessionFilter {
     void sessionClosed(SessionFilterChain filterChain) throws Exception;
 
     /**
-     * Session timeout, but not closed.
+     * Session 会话超时，但未关闭.
      * 
      * @param filterChain
      *            session filter chain
@@ -37,7 +37,7 @@ public interface SessionFilter {
     void sessionTimeout(SessionFilterChain filterChain) throws Exception;
 
     /**
-     * Session received a packet.
+     * Session 收到了一个数据包.
      * 
      * @param filterChain
      *            session filter chain
@@ -50,7 +50,7 @@ public interface SessionFilter {
             throws Exception;
 
     /**
-     * Session received a object which is decoded by <code>PacketDecoder</code>.
+     * Session 收到了一个被 <code>PacketDecoder</code>解码的对象.
      * 
      * @param filterChain
      *            session filter chain
@@ -63,8 +63,7 @@ public interface SessionFilter {
             throws Exception;
 
     /**
-     * Filter before send packet. This event will be dispatched in the reversed
-     * order.
+     * 发送数据包前过滤, 事件派发将按相反顺序发送.
      * 
      * @param filterChain
      *            session filter chain
@@ -77,8 +76,8 @@ public interface SessionFilter {
             throws Exception;
 
     /**
-     * Session sent a packet. This event will be dispatched in the reversed
-     * order. The packet's position will not be updated.
+     * Session 发送一个数据包. 事件派发将按相反顺序发送. 
+     * 数据包的位置不会更新.
      * 
      * @param filterChain
      *            session filter chain
@@ -91,8 +90,7 @@ public interface SessionFilter {
             throws Exception;
 
     /**
-     * Session sent a object. This event will be dispatched in the reversed
-     * order.
+     * Session 发送一个对象. 事件派发将按相反顺序发送.
      * 
      * @param filterChain
      *            session filter chain
@@ -105,7 +103,7 @@ public interface SessionFilter {
             throws Exception;
 
     /**
-     * Session caught a exception.
+     * Session 捕获异常.
      * 
      * @param filterChain
      *            session filter chain
