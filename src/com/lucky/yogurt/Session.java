@@ -80,15 +80,14 @@ public interface Session {
     PacketEncoder getPacketEncoder();
 
     /**
-     * Get all session attributs. The returned map is unmodifiable.
+     * 获取所有Session会话属性. 返回的Map是不可修改的
      * 
      * @return all attributes
      */
     Map getAttributes();
 
     /**
-     * Returns <tt>true</tt> if the session contains an attribute for the
-     * specified key.
+     * 如果Session会话包含指定key的属性，则返回<tt> true </ tt>
      * 
      * @param key
      *            key
@@ -98,7 +97,7 @@ public interface Session {
     boolean containsAttribute(Object key);
 
     /**
-     * Get the session attribute mapped with the specified key.
+     * 获取使用指定key的Session会话属性
      * 
      * @param key
      *            key
@@ -107,7 +106,7 @@ public interface Session {
     Object getAttribute(Object key);
 
     /**
-     * Set session attribute.
+     * 设置 session 会话属性.
      * 
      * @param key
      *            key
@@ -117,7 +116,7 @@ public interface Session {
     void setAttribute(Object key, Object attribute);
 
     /**
-     * Removes the attribute for this key if it is present.
+     * 删除指定key的属性（如果存在）.
      * 
      * @param key
      *            key
